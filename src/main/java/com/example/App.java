@@ -1,13 +1,22 @@
 package com.example;
 
-/**
- * Hello world!
- *
- */
-public class App 
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+@SpringBootApplication
+public class App implements CommandLineRunner
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        ConfigurableApplicationContext context = SpringApplication.run(App.class, args);
+        // アプリを終了させる
+        context.close();
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+        System.out.println("hello world");
     }
 }

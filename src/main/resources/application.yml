@@ -1,0 +1,17 @@
+com:
+  example:
+    properties:
+      value: "application.yml value"
+
+spring:
+  profiles:
+    group:
+      default:
+        - common
+        - dev
+      staging:
+        - common
+        - staging
+      prod:
+        - common
+        - prod
