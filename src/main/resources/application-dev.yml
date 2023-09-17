@@ -1,0 +1,5 @@
+com:
+  example:
+    properties:
+      value[0]: "application-dev"
+      value[1]: ${line.api.secret}
